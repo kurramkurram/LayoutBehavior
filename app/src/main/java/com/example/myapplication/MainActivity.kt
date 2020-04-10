@@ -20,16 +20,16 @@ class MainActivity : AppCompatActivity() {
         val bottomSheet = findViewById<LinearLayout>(R.id.bottom_sheet_layout)
         mBottomSheet = BottomSheetBehavior.from(bottomSheet)
 
-mBottomSheet.addBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
-    override fun onSlide(bottomSheet: View, slideOffset: Float) {
+        mBottomSheet.addBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
+            override fun onSlide(bottomSheet: View, slideOffset: Float) {
 
-    }
+            }
 
-    override fun onStateChanged(bottomSheet: View, newState: Int) {
-        Log.d("MainActivity", "#onCreate\$onStateChanged state = $newState")
-    }
+            override fun onStateChanged(bottomSheet: View, newState: Int) {
+                Log.d("MainActivity", "#onCreate\$onStateChanged state = $newState")
+            }
 
-})
+        })
         textView.setOnClickListener { onTextClicked(it) }
     }
 
